@@ -1,0 +1,4 @@
+1. Open PowerShell 7 command line
+2. Connect to site (MFA) - Connect-PnPOnline -Url "https://xx.sharepoint.com/sites/zforms/" -Interactive
+3. run cd "C:\Users\sanjay\Box\TP DATA\My Documents\PROJECTS\2020-21\test\PowerShell"
+4. run .\PnPDeleteListItems - this will delete items from the list provided in the script. This list must exist in connected site.
