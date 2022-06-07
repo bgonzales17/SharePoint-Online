@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-fx-crud-react-pnp-client-side-solution",
+    "id": "93fa538f-7b89-418b-abb1-f1a0080adea2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "sp-fx-crud-react-pnp description"
+      },
+      "longDescription": {
+        "default": "sp-fx-crud-react-pnp description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sp-fx-crud-react-pnp Feature",
+        "description": "The feature that activates elements of the sp-fx-crud-react-pnp solution.",
+        "id": "a59a4794-87ae-4b7d-813b-9c58a7fa4327",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-fx-crud-react-pnp.sppkg"
+  }
+}
