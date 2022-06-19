@@ -1,0 +1,16 @@
+Use Node.js Command prompt
+
+1. Install Yeoman and gulp
+npm install -g yo gulp
+
+2. Install the SharePoint Framework Yeoman generator globally
+npm install -g @microsoft/generator-sharepoint
+
+3. Yoman template for SharePoint SPFx webpart 
+yo @microsoft/sharepoint
+
+4. Install the developer certificate (project directory) - Need to run only once
+gulp trust-dev-cert
+
+5. Build and preview your web part (project directory)
+gulp serve
