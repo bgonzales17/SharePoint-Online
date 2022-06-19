@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "custom-web-part-properties-client-side-solution",
+    "id": "ebf9394a-8c49-44fb-b8cc-9a8d784bcb03",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "custom-web-part-properties description"
+      },
+      "longDescription": {
+        "default": "custom-web-part-properties description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "custom-web-part-properties Feature",
+        "description": "The feature that activates elements of the custom-web-part-properties solution.",
+        "id": "9e6d419b-0f57-4f5d-939b-f01e465052d9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/custom-web-part-properties.sppkg"
+  }
+}
