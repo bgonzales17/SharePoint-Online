@@ -4,6 +4,10 @@ export interface IWebPartPropertiesProps {
   myMultiline: string;
   myCheckbox: boolean;
   myToggle: boolean;
+  mySlider:number;
+  myChoiceGroup:string;
+  myChoiceGroupImage:string;
+
   isDarkTheme: boolean;
   environmentMessage: string;
   hasTeamsContext: boolean;
