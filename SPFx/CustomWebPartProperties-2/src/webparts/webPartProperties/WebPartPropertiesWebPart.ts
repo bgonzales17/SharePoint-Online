@@ -6,8 +6,12 @@ import {
   PropertyPaneTextField,
   PropertyPaneDropdown,
   PropertyPaneCheckbox,
-  PropertyPaneToggle
+  PropertyPaneToggle,
+  PropertyPaneSlider,
+  PropertyPaneChoiceGroup,
+  PropertyPaneLink
 } from '@microsoft/sp-property-pane';
+
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
@@ -21,7 +25,9 @@ export interface IWebPartPropertiesWebPartProps {
   myMultiline: string;
   myCheckbox: boolean;
   myToggle: boolean;
-  
+  mySlider: number;
+  myChoiceGroup:string;
+  myChoiceGroupImage:string;  
 }
 
 export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWebPartPropertiesWebPartProps> {
@@ -31,8 +37,15 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    this.properties.myMultiline = "My sample text from onInit";
+    this.properties.myToggle = true;
+    this.properties.myCheckbox = true;
 
     return super.onInit();
+  }
+
+  protected get disableReactivePropertyChanges(): boolean {
+    return  true;
   }
 
   public render(): void {
@@ -44,12 +57,15 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
         myMultiline: this.properties.myMultiline,
         myCheckbox: this.properties.myCheckbox,
         myToggle: this.properties.myToggle,
+        mySlider: this.properties.mySlider,
+        myChoiceGroup:this.properties.myChoiceGroup,
+        myChoiceGroupImage:this.properties.myChoiceGroupImage,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName
       }
-    );
+    );   
 
     ReactDom.render(element, this.domElement);
   }
@@ -112,12 +128,73 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                   ]
                 }),
                 PropertyPaneCheckbox('myCheckbox',{
-                  text:'My Checkbox'}),
+                  text:'My Checkbox',
+                  checked:true
+                }),
+
                 PropertyPaneToggle('myToggle',{
+                  key:'myToggle',
                   label:'My Toggle',
                   onText:'Yes',
                   offText:'No'
-                })
+                }),
+
+                PropertyPaneSlider('mySlider',{
+                  label:'My Slider',
+                  min:1,
+                  max:10,
+                  step:1,
+                  showValue:true,
+                  value:1
+                }),
+
+                PropertyPaneChoiceGroup('myChoiceGroup',{
+                  label:'My Radio button choices',
+                  options:[
+                    {key:'Red',text:'Red'},
+                    {key:'Blue',text:'Blue', checked:true},
+                    {key:'Green',text:'Green'}
+                  ]
+                }),
+
+                PropertyPaneChoiceGroup('myChoiceGroupImage', {
+                  label: 'Select Invoice File type:',
+                  options: [
+                   { key: 'MSWord', text: 'MSWord',
+                     imageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/docx_32x1.png',
+                     imageSize: { width: 32, height: 32 },
+                     selectedImageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/docx_32x1.png'
+                   },
+                   { key: 'MSExcel', text: 'MSExcel',
+                     imageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/xlsx_32x1.png',
+                     imageSize: { width: 32, height: 32 },
+                     selectedImageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/xlsx_32x1.png'
+                   },
+                   { key: 'MSPowerPoint', text: 'MSPowerPoint',
+                     imageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/pptx_32x1.png',
+                     imageSize: { width: 32, height: 32 },
+                     selectedImageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/pptx_32x1.png'
+                   },
+                   { key: 'OneNote', text: 'OneNote',
+                     imageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/one_32x1.png',
+                     imageSize: { width: 32, height: 32 },
+                     selectedImageSrc: 'https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/png/one_32x1.png'
+                   }
+                 ]
+               }),
+
+               PropertyPaneLink('', {
+                href: 'https://www.amazon.in',
+                text: 'Buy Intel Processor from the best Seller',
+                target: '_blank',
+                popupWindowProps: {
+                  height: 500,
+                  width: 500,
+                  positionWindowPosition: 2,
+                  title: 'Amazon'
+                }
+              }),
+
               ]
             }
           ]

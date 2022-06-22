@@ -26,7 +26,10 @@
       "myDropdown": "Red",
       "myMultiline":"My sample text",
       "myCheckbox": true,
-      "myToggle":true
+      "myToggle":true,
+      "mySlider":5,
+      "myChoiceGroup":"Blue",
+      "myChoiceGroupImage":"MSExcel"
     }
   }]
 }
