@@ -106,11 +106,11 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription
+            description: "Page One"
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: "First Group",
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
@@ -126,19 +126,12 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                     {key:'Blue',text:'Blue'},
                     {key:'Green',text:'Green'}
                   ]
-                }),
-                PropertyPaneCheckbox('myCheckbox',{
-                  text:'My Checkbox',
-                  checked:true
-                }),
-
-                PropertyPaneToggle('myToggle',{
-                  key:'myToggle',
-                  label:'My Toggle',
-                  onText:'Yes',
-                  offText:'No'
-                }),
-
+                })               
+              ]
+            },
+            {
+              groupName: "Second Group",
+              groupFields: [
                 PropertyPaneSlider('mySlider',{
                   label:'My Slider',
                   min:1,
@@ -147,7 +140,6 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                   showValue:true,
                   value:1
                 }),
-
                 PropertyPaneChoiceGroup('myChoiceGroup',{
                   label:'My Radio button choices',
                   options:[
@@ -155,8 +147,36 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                     {key:'Blue',text:'Blue', checked:true},
                     {key:'Green',text:'Green'}
                   ]
-                }),
+                })              
+              ]
+            }
+          ],
+          displayGroupsAsAccordion:true
+        },
 
+        {
+          header: {
+            description: "Page Two"
+          },
+          groups: [
+            {
+              groupName: "Third Group",
+              groupFields: [                
+                PropertyPaneCheckbox('myCheckbox',{
+                  text:'My Checkbox',
+                  checked:true
+                }),
+                PropertyPaneToggle('myToggle',{
+                  key:'myToggle',
+                  label:'My Toggle',
+                  onText:'Yes',
+                  offText:'No'
+                })
+              ]
+            },
+            {
+              groupName: "Fourth Group",
+              groupFields: [              
                 PropertyPaneChoiceGroup('myChoiceGroupImage', {
                   label: 'Select Invoice File type:',
                   options: [
@@ -182,7 +202,6 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                    }
                  ]
                }),
-
                PropertyPaneLink('', {
                 href: 'https://www.amazon.in',
                 text: 'Buy Intel Processor from the best Seller',
@@ -193,11 +212,11 @@ export default class WebPartPropertiesWebPart extends BaseClientSideWebPart<IWeb
                   positionWindowPosition: 2,
                   title: 'Amazon'
                 }
-              }),
-
+              })
               ]
             }
-          ]
+          ],
+          displayGroupsAsAccordion:true
         }
       ]
     };
