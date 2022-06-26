@@ -1,0 +1,1 @@
+{"version":3,"file":"IThirdpartyApiCallProps.d.ts","sourceRoot":"","sources":["../../../../src/webparts/thirdpartyApiCall/components/IThirdpartyApiCallProps.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,uBAAuB;IACtC,WAAW,EAAE,MAAM,CAAC;IACpB,WAAW,EAAE,OAAO,CAAC;IACrB,kBAAkB,EAAE,MAAM,CAAC;IAC3B,eAAe,EAAE,OAAO,CAAC;IACzB,eAAe,EAAE,MAAM,CAAC;IACxB,QAAQ,EAAC,GAAG,CAAC;CACd"}
