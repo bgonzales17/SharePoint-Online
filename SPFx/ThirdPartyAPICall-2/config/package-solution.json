@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "third-party-api-call-client-side-solution",
+    "id": "9cbea483-b556-4cd6-b58e-ab1bb2116952",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "third-party-api-call description"
+      },
+      "longDescription": {
+        "default": "third-party-api-call description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "third-party-api-call Feature",
+        "description": "The feature that activates elements of the third-party-api-call solution.",
+        "id": "fa63320c-cebe-40f8-b6bb-ea4c6dc950c6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/third-party-api-call.sppkg"
+  }
+}
