@@ -9,7 +9,7 @@ export class ServiceProvider {
       private httpClientOptionsForGlobal: IHttpClientOptions = {  
         headers: new Headers({  
             "x-rapidapi-host": "covid-193.p.rapidapi.com",  
-            "x-rapidapi-key": "96a051ffaemshc889cdc82489aadp105867jsn597cfdd0d94a"  
+            "x-rapidapi-key": "<API key>"  
         }),  
         method: "GET",  
         mode: "cors"  
