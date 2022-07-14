@@ -1,0 +1,1 @@
+{"version":3,"file":"ServiceProvider.d.ts","sourceRoot":"","sources":["../../../src/webparts/covidDataWebPart/ServiceProvider.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,cAAc,EAAE,MAAM,4BAA4B,CAAC;AAE5D,qBAAa,eAAe;IACxB,OAAO,CAAC,SAAS,CAAgB;gBACd,OAAO,EAAE,cAAc;IAGxC,OAAO,CAAC,0BAA0B,CAOpC;IAEW,SAAS;CAOvB"}

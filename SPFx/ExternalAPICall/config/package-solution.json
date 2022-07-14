@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "external-api-call-client-side-solution",
+    "id": "b10455b4-ef27-47ce-a415-df9e1b43ef30",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "external-api-call description"
+      },
+      "longDescription": {
+        "default": "external-api-call description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "external-api-call Feature",
+        "description": "The feature that activates elements of the external-api-call solution.",
+        "id": "49c0b9bd-405c-477b-9e06-93b86e5d0934",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/external-api-call.sppkg"
+  }
+}

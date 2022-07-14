@@ -1,0 +1,1 @@
+//# sourceMappingURL=ICovidDataWebPartProps.js.map
