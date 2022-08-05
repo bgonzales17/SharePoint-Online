@@ -1,0 +1,1 @@
+{"version":3,"file":"ICalendarEventsState.d.ts","sourceRoot":"","sources":["../../../../src/webparts/calendarEvents/components/ICalendarEventsState.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,cAAc,MAAM,kCAAkC,CAAC;AAEnE,MAAM,WAAW,oBAAoB;IACjC,MAAM,EAAE,cAAc,CAAC,KAAK,EAAE,CAAC;CAClC"}
